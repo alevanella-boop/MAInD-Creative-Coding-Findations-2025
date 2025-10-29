@@ -19,6 +19,12 @@ time, mark, audio, video {
   vertical-align: baseline;
 }
 
+/*structure _____________________ */
+
+* {
+  box-sizing: border-box;
+}
+
 html {
   font-family: 'Courier New', Courier, monospace;
 }
@@ -47,7 +53,7 @@ input, button {
   border: 1px solid grey;
   padding: 0,6rem;
   height: 2 rem;
-  }
+}
 
 #input-form {
   width: 100%;
@@ -67,13 +73,32 @@ main {
   margin: 1rem;
 }
 
+/*list element _____________________ */
 li {
   list-style-type: none;
 }
 
+/*list style*/
+
 ul.list li {
-  padding: 0rem;
-  background-color: green;
+  padding: 1rem 0;
+  border-bottom: 1px solid grey;
+  display: flex;
+  gap: 1rem;
+  align-items: center;
+}
+
+ul.list li :first-child {
+  padding-top: 0;
+}
+
+ul.list li :last-child {
+  border-bottom: none;
+  padding-bottom: 0;
+}
+
+ul.list li p {
+  flex-grow: 1;
 }
 
 ul.card li {
@@ -81,4 +106,20 @@ ul.card li {
   background-color: aqua;
 }
 
+/*card style*/
+
+ul.card {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  gap: 0.6rem;
+}
+
+ul.card li {
+  padding: 2rem;
+  background-color: aqua;
+  /*calculus are useful when using the flexbox model, they are sort of parameters */
+  width: calc(100% / 3 - 0.4rem);
+  overflow: hidden;
+}   
 
