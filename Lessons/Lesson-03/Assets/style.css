@@ -1,0 +1,125 @@
+/* general rules */
+html {
+font-size: 16px;
+font-family: sans-serif;
+background-color: #ffffff;
+}
+
+h1 {
+    text-align: center;
+}
+
+input, button {
+    margin: 0;
+    padding: 0;
+    border: none;
+    background: none;
+    font:inherit;
+    color: inherit;
+    outline: none;
+    box-sizing: border-box;
+}
+
+button {
+    border-style: solid;
+    border-color: #000000;
+    border-width: 1px;
+    border-radius: 1rem;
+    padding: 1rem;
+}
+
+/* input and add button */
+
+#add-container {
+    display: flex;
+    gap: 1rem;
+    margin-bottom: 1rem;
+}
+
+#task-input {
+   width: 100%;
+   border: 1px solid #000000;
+   padding: 1rem;
+   border-radius: 1rem;
+}
+
+/* view list mode toggle */
+
+#view-toggle-container {
+    display: flex;
+    gap: 1rem;    
+}
+
+.toggle-btn {
+    background-color: #ffffff;
+    width: 50%;
+}
+
+/* to-do list */
+
+/*card view*/
+.card-view { 
+    display: flex;
+    flex-wrap: wrap;  
+    padding-left: 0;  
+}
+
+li {
+    display: block;
+    width: 100%;
+}
+
+.card-view, li {
+    background-color: #ffa500;
+    height: 3rem;
+    border: 1px solid #000000;
+    border-radius: 1rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 1rem;
+}
+
+/*list view*/
+
+.list-view {
+    border: 1px solid #000000;
+    border-radius: 1rem;
+    padding: 1rem;
+    background-color: #ffa500;
+    list-style-type: disc;
+    padding: 1rem 1rem 1rem 2rem;
+}
+
+.list-view li {
+    height: 2rem;
+    border: 0px;
+    justify-content: flex-start;
+    display: list-item;
+}
+
+/*buttons*/
+
+/*general button rules*/
+
+button:hover {
+    cursor: pointer;
+}
+
+.toggle-btn:hover {
+    background-color: #4169e1;
+}
+
+.toggle-btn:active {
+    background-color: #0000cd;
+    color: #ffffff;
+}
+
+#add-btn:hover {
+    background-color: #ff8c00;
+}
+
+#add-btn:active {
+    background-color: #ff4500;
+    color: #ffffff;
+}
