@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="assets/style.css">
+    <script src="assets/script.js" defer></script>
+    <title>To-do list</title>
+</head>
+
+<body>
+    
+    <header>
+
+        <h1>My Tofu Ideas</h1>
+
+        <!-- text input, add btn, color input-->
+        <div id="add-container">
+            <input type="text" id="tofu-input" placeholder="Write here your tofu ideas">
+            <input type="color" id="color-input" value="#ffffff"> 
+            <button id="add-btn">+</button>
+        </div>
+
+        <!-- view list mode button -->
+        <div id="view-toggle-container">
+            <button id="list-view-btn" class="toggle-btn">List view</button>
+            <button id="card-view-btn" class="toggle-btn">Card view</button>
+        </div>
+
+    </header>
+
+    <main>
+
+        <!-- input and add button -->
+        <ul id="tofu-list-container" class="list-view">
+            <li>
+                <p>
+                    Boiled tofu
+                </p>
+                <button id="btn-remove">Remove</button>
+            </li>
+
+            <li>
+                <p>
+                    Sticky tofu
+                </p>
+                <button id="btn-remove">Remove</button>
+            </li>
+
+            <li>
+                <p>
+                    Lentil tofu
+                </p>
+                <button id="btn-remove">Remove</button>
+            </li>
+
+            <li>
+                <p>
+                    Fried tofu
+                </p>
+                <button id="btn-remove">Remove</button>
+            </li>
+
+            <li>
+                <p>
+                    Chickpea tofu
+                </p>
+                <button id="btn-remove">Remove</button>
+            </li>
+
+            <li>
+                <p>
+                    baked tofu
+                </p>
+                <button id="btn-remove">Remove</button>
+            </li>
+        </ul>
+
+    </main>
+
+</body>
+
+</html>

@@ -1,6 +1,6 @@
-#Assignement 1
+# Assignement 1
 
-##Brief 
+## Brief 
 
  (copy it here)
 
