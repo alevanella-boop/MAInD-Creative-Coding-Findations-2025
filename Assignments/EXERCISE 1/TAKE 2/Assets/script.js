@@ -76,7 +76,7 @@ addButton.addEventListener('click', () => {
     
     // Create remove button
     const btnRemove = document.createElement("button");
-    btnRemove.textContent = "Remove";
+    btnRemove.textContent = "X";
     btnRemove.className = "btn-remove";
     
     // Add both to the li
