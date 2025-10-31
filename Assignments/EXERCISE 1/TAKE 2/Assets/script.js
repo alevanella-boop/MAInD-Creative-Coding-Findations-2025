@@ -2,7 +2,9 @@
 const addButton = document.getElementById('add-btn');
 const listButton = document.getElementById('list-view-btn');
 const cardButton = document.getElementById('card-view-btn');
-const removeButton = document.getElementById('btn-remove');
+//const removeButton = document.querySelector('.btn-remove');
+
+//const removeButton = document.getElementsByClassName('btn-remove');
 
 
 //elements
@@ -16,8 +18,7 @@ const colorInput = document.getElementById('color-input');
 const inputField = document.getElementById('tofu-input');
 
 
-//EVENT LISTENERS
-//added a listener so the action can be executed
+//EVENT LISTENERS-> added a listener so the action can be executed
 
 listButton.addEventListener("click", () => {
     console.log("list view button pressed!")
@@ -28,14 +29,16 @@ cardButton.addEventListener("click", () => {
 });
 
 
+//colorInput.addEventListener("input", (event) => {
+    //console.log("color input changed!", event.target.value);
 
-colorInput.addEventListener("input", (event) => {
-    console.log("color input changed!", event.target.value);
-
-    tofuList.style.backgroundColor = event.target.value;
-})
+  //  tofuList.style.backgroundColor = event.target.value;
+//})
 
 
+//CHANGE VIEW
+
+//Event listeners for view toggle
 //List
 listButton.addEventListener('click', () => {
     console.log("list button pressed!");
@@ -52,29 +55,43 @@ cardButton.addEventListener('click', () => {
     tofuList.classList.add("card-view");
 })
 
-//Add
-addButton.addEventListener('click', () => {
 
-    //local variables, only exist inside this function
-    //first javascript interaction with the html
-    
+//ADD ITEM
+addButton.addEventListener('click', () => {
     console.log("Add button pressed!!!!");
    
     const inputValue = tofuInput.value;
+    const selectedColor = colorInput.value;  // ADD THIS
+    
+    if (inputValue === "") {
+        return;
+    }
 
-    const listElement = document.createElement("li");
+    const tofuElement = document.createElement("li");
+    tofuElement.style.backgroundColor = selectedColor;  // ADD THIS
+    
+    // Create paragraph for text
+    const p = document.createElement("p");
+    p.textContent = inputValue;
+    
+    // Create remove button
+    const btnRemove = document.createElement("button");
+    btnRemove.textContent = "Remove";
+    btnRemove.className = "btn-remove";
+    
+    // Add both to the li
+    tofuElement.appendChild(p);
+    tofuElement.appendChild(btnRemove);
 
-    listElement.innerHTML = inputValue;
-
-    tofuList.appendChild(listElement);
+    tofuList.appendChild(tofuElement);
 
     tofuInput.value = "";
-
 });
 
-//Remove
-removeButton.addEventListener("click", () => {
-    console.log("remove button pressed!");
 
-    
-})
+tofuList.addEventListener('click', (e) => {
+    if (e.target.classList.contains('btn-remove')) {
+        e.target.closest('li').remove();
+    }
+});
+

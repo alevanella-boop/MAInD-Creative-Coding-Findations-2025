@@ -60,6 +60,13 @@ input, button {
     height: 2rem;
 }
 
+.btn-remove {
+  background-color: #ffffff;
+  border: 1px solid #cecdcd;
+  border-radius: 0.5rem;
+  padding: 0.3rem 0.6rem;
+}
+
 #input-form {
   width: 100%;
   display: flex;
@@ -79,7 +86,7 @@ main {
 }
 
 
-/*BUTTONS - general rules*/
+/*BUTTONS - general responsive rules*/
 
 button:hover {
     cursor: pointer;
@@ -101,6 +108,16 @@ button:hover {
 #add-btn:active {
     background-color: #ff4500;
     color: #ffffff;
+}
+
+.btn-remove:hover {
+  background-color: #4169e1;
+  color: white;
+}
+
+.btn-remove:active {
+  background-color: #0000cd;
+  color: white;
 }
 
 
@@ -170,6 +187,7 @@ li {
 
 ul.card-view li {
     background-color: #78ffed;
+    border-radius: 1rem;
     height: 3rem;
     border: 1px solid #3a7f76;
     display: flex;
